@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+
+body{
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 110px 240px 24px 240px;
+   
+}
+
+.content-header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    h3{
+        padding-left: 8rem;
+        font-size: 36px;
+        font-weight: 700;
+        font-family: 'PT Serif', serif;
+        text-align: left;
+    }
+    h5{
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    p{
+        width: 439px;
+        font-size: 18px;
+        font-weight: 400;
+       
+    }
+}
+
+.content-body{
+   
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    margin-top: 96px;
+   
+    .card-item{
+        position: relative;
+        width: 305px;
+        margin-top: 132px;
+        padding-left: 7rem ;
+        .card-item--position{
+            position: absolute;
+            left: 30em;
+            font-size: 12px;
+            width: max-content;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            font-family: 'PT Serif', serif;
+            font-weight: 400;
+        }
+        img{
+            width: 238px;
+        }
+        .card-item--name{
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+
+
+        // &:nth-child(even) {
+        //     top: 44px;
+        //   }
+    }
+
+    .down{
+        top: 8rem;
+    }
+
+   
+}
+
+.content-footer{
+    margin-top: 20em; 
+    text-align: center;
+  
+ }
+
+ @media only screen and (max-width:1445px){
+     
+    .container{
+        // max-width: auto;
+        margin: 110px 50px 24px 50px;
+       
+    }
+ }
+
+ @media only screen and (max-width:1045px){
+     
+    .content-body{
+        grid-template-columns: repeat(2,1fr);
+
+        .card-item{
+        &:nth-child(even) {
+            top: 10rem;
+          }
+        }
+        .down{
+            top: 0px;
+        }
+    
+    }
+ }
+
+ @media only screen and (max-width:845px){
+     
+    .content-header{
+        
+        // grid-template-columns: 1fr;
+        h3{
+            padding-left: 0px;
+           
+        }
+        
+    }
+ }
+
+ @media only screen and (max-width:695px){
+     
+    .content-header{
+        
+        grid-template-columns: 1fr;
+        // h3{
+        //     padding-left: 0px;
+           
+        // }
+        
+    }
+    .content-body{
+        .card-item{
+            padding-left: 0px;
+
+            .card-item--position{
+               
+                left: 20em;
+             
+            }
+          }
+
+
+    }
+    
+ }
